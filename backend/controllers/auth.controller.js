@@ -40,7 +40,9 @@ const setCookies = (res, accessToken, refreshToken) => {
 
 export const signup = async (req, res) => {
   const { password, name } = req.body;
-  const email = String(req.body.email || "").trim().toLowerCase();
+  const email = String(req.body.email || "")
+    .trim()
+    .toLowerCase();
   try {
     const userExists = await User.findOne({ email });
 
@@ -69,7 +71,9 @@ export const signup = async (req, res) => {
 
 export const login = async (req, res) => {
   try {
-    const email = String(req.body.email || "").trim().toLowerCase();
+    const email = String(req.body.email || "")
+      .trim()
+      .toLowerCase();
     const password = req.body.password;
     const user = await User.findOne({ email });
     if (user && (await user.comparePassword(password))) {
@@ -85,7 +89,7 @@ export const login = async (req, res) => {
         role: user.role,
       });
     } else {
-      res.status(401).json({ message: "Invalid email or password" });
+      res.status(400).json({ message: "Invalid email or password" });
     }
   } catch (error) {
     console.log("error with login controller", error.message);
