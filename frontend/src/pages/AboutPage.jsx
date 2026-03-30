@@ -12,7 +12,7 @@ export default function AboutPage() {
 
         <p className="mt-4 text-sm leading-relaxed text-white/70">
           <span className="font-semibold text-white">
-            E-comerce Thrift is a web development project
+            E-commerce Thrift is a web development project
           </span>
           . It’s built to showcase an e-commerce flow (browse listings, cart,
           admin uploads, checkout UI) — it is{" "}

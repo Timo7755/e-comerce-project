@@ -36,7 +36,7 @@ const Navbar = () => {
             className="inline-flex items-center gap-2 text-lg font-semibold tracking-tight text-white transition-opacity hover:opacity-90"
           >
             <span className="bg-gradient-to-r from-violet-300 via-fuchsia-200 to-pink-200 bg-clip-text text-transparent">
-              E-comerce Thrift
+              E-commerce Thrift
             </span>
           </Link>
         </div>
